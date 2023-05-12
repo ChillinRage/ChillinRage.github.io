@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DaSt-Go (Sorting)</title>
+        <link rel="stylesheet" href="sortings_css.css">
+    </head>
+
+    <body>
+        <section id="header">
+            <h1>Data Structures & Algorithms (DaSt-Go)</h1>
+        </section>
+
+        <h1 id="title">Sorting</h1>
+
+        <section id="contentTable">
+            <h1 id="contentHeader">Table of Content</h1>
+            <h1 id="content">0. Introduction</h1>
+            <h1 id="content">1. Bubble Sort</h1>
+            <h1 id="content">2. Insertion Sort</h1>
+            <h1 id="content">3. Selection Sort</h1>
+            <h1 id="content">4. Counting Sort</h1>
+            <h1 id="content">5. Merge Sort</h1>
+            <h1 id="content">6. Quick Sort</h1>
+            <h1 id="content">Other comments</h1>
+            <h1 id="content">IN PROGRESS</h1>
+        </section>
+
+        <section id="contentSection">
+            <h1 id="sectionHeader">0. Introduction</h1>
+            <p id="text">
+                Sorting is the process of arranging a collection of data in a particular order, in these 
+                showcases I will use an array with numerical values and sort it in ascending order 
+                (from the smallest value to the largest value). 
+            </p>
+            <div style="text-align: center;"><img src="./sorting_images/intro1.png" height=300px width=429px></div>
+            <p id="text">
+                Before we start, let's establish some (possibly foreign to some visitors) terms that I would be using:<br>
+                &emsp; - <strong>dataset:</strong> refers to a group/collection of data that you want to be sorted.
+                (i.e., the array shown in the picture above is a<br>
+                &emsp;&emsp;&emsp; group of integers)<br>
+
+                &emsp; - <strong>n:</strong> number of data in the datasets (length of the array).<br>
+
+                &emsp; - <strong>in-place:</strong> the sorting is performed within the given array, rather than duplicating 
+                a new array with the sorted elements.<br>
+                
+                &emsp; - <strong>stable:</strong> a stable algorithm refers to one that maintains the order of equal elements 
+                in the array throughout the sorting<br>
+                &emsp;&emsp;&emsp; process. It can be hard to visualise what I mean just from the picture above, but you'll see better examples later on<br>
+                &emsp;&emsp;&emsp; in each of them.
+            </p>
+        </section>
+
+        <section id="contentSection"> <!--Bubble-->
+            <h1 id="sectionHeader">1. Bubble Sort</h1>
+            <p id="text">
+                A simple sorting algorithm that sorts the dataset by comparing each adjacent pairs and swapping them if needed.
+            </p>
+            <p id="text">
+                <Strong><u>Algorithm</u></Strong><br>
+                &emsp; <strong>1)</strong> Take the first element (treat as the current element) in the array and compare 
+                against its next element.<br>
+
+                &emsp; <strong>2)</strong> If the current element is bigger than the next element, swap these 2 elements.<br>
+                &emsp; <strong>3)</strong> Repeat step 1 and 2 for the second elements onwards, and stop at the second last element.<br>
+                &emsp; <strong>4)</strong> Repeat steps 1-3 n - 1 more times.<br>
+            </p>
+
+            <div style="text-align: center;">
+               <img src="./sorting_images/bubble_pass1.png" height=300px width=360px>
+                <img src="./sorting_images/bubble_pass2.png" height=300px width=360px>
+                <br>
+                <img src="./sorting_images/bubble_pass3.png" height=300px width=360px>
+                <img src="./sorting_images/bubble_pass4.png" height=300px width=360px>
+            </div><br>
+
+            <p id="text">
+                There are 2 points to take note of here.<br><br>
+                
+                Firstly, <strong>after the i-th pass, the i-th largest elements 
+                in the array are in the correct position.</strong> From the example shown, "99" was swapped into the last 
+                position in the 1st pass, then "50" in the 2nd pass, and so on. Because of it, it is safe to say that 
+                there is no need to compare with those elements afterwards since they would be at equal to or greater 
+                than every element before it and thus no swapping will be done on it. (<i>This is similar to how larger 
+                bubbles float to the top faster, so the i-th largest elements will always be guaranteed to "float" to the 
+                back first, before the remaining elements are sorted.</i>). <br><br>
+                
+                Secondly, <strong>the algorithm can terminate early after there is no swapping of elements in a pass</strong>.
+                Notice that by the 3rd pass, the array is already sorted and no pairs were swapped in the 4th and 5th passes.
+                If there is no change in the array after one pass, re-checking each pair of elements again will still 
+                result in no change occurring in the consecutive passes. As such, there is unnecessary time and effort that 
+                can be reduced by simply stopping early once no swapping was done in a pass. Using an example below, the time 
+                taken to sort the array can be cut down to only 2 passes, which is one-third of what it would've taken with 
+                6 passes.   
+            </p>
+
+            <div style="text-align: center;">
+               <img src="./sorting_images/repeat_1.png" height=300px width=360px>
+                <img src="./sorting_images/repeat_2.png" height=300px width=360px>
+            </div><br>
+
+            <p id="text">
+                <strong><u>Analysis</u></strong><br>
+                <strong>Time Complexity:</strong> O(n<sup>2</sup>)
+                <br>
+
+                <strong>Space Complexity:</strong> O(1) <br>
+
+                <strong>Stability:</strong> Stable.
+            </p>
+
+        </section>
+
+        <section id="contentSection"> <!--Insertion-->
+            <h1 id="sectionHeader">2. Insertion Sort</h1>
+
+            <h2 id="subHeader">Overview</h2>
+            <p id="text">
+                Insertion sort is a simple sorting algorithm that works by partitioning the array into 2 parts: the sorted 
+                and unsorted. Take an element from the unsorted part and insert it into its correct position in the sorted 
+                part, and iterate until every unsorted element is inserted in the sorted part. 
+            </p>
+            
+            <h2 id="subHeader">Algorithm</h2>
+            <p id="text">
+                <strong>1)</strong> Start with the second element in the array as the current element, assuming the first 
+                    is already sorted.<br>
+                <strong>2)</strong> Compare the current element with the preceeding element, if the current element is 
+                    smaller than the preceeding one,<br>
+                    &emsp; swap their positions.<br>
+                <strong>3)</strong> Repeat step 2 until either the current element becomes the first element in the array 
+                    (there are no preceeding elements) or<br>
+                    &emsp; the current element is larger than or equal to the preceeding one. Consider the current element 
+                    as sorted.<br>
+                <strong>4)</strong> Repeat step 2 and 3 with the next unsorted element, until the last element in the array 
+                is sorted.<br>
+            </p>
+
+            <div style="text-align: center;"><img src="./sorting_images/insertion 1.png" height=343px height=588px></div>
+
+            <h2 id="subHeader">Explanation</h2>
+            <p id="text">
+                
+            </p>
+
+            <h2 id="subHeader">Analysis</h2>
+            <p id="text">
+                <strong>Time Complexity:</strong> O(n<sup>2</sup>)
+                <br>
+
+                <strong>Space Complexity:</strong> O(1) <br>
+
+                <strong>Stability:</strong> Stable.
+            </p>
+        </section>
+
+        <section id="contentSection"> <!--Selection-->
+            <h1 id="sectionHeader">3. Selection Sort</h1>
+
+            <h2 id="subHeader">Overview</h2>
+            <p id="text">
+                Selection sort is another simple algorithm that partitions the array into 2 parts similar to
+                insertion sort. However, selection sort instead finds the smallest element in the unsorted part 
+                to put at the start of the unsorted part (aka at the end of the sorted part). Iteratively find 
+                the smallest element until there is no elements left in the unsorted part. 
+            </p>
+
+            <h2 id="subHeader">algorithm</h2>
+            <p id="text">
+                <strong>1)</strong> Start with index i = 0 (referencing the first index of the array).<br>
+                <strong>2)</strong> Find the smallest element in the subarray from array[i] to array[n-1].<br>
+                <strong>3)</strong> Swap the indices of the found element with the element at index i.<br>
+                <strong>4)</strong> Increment i by 1 and repeat steps 2 and 3 until i = n - 1.<br>
+            </p>
+
+            <p id="text">
+                <strong><u>Explanation</u></strong><br>
+            </p>
+
+            <h2 id="subHeader">Analysis</h2>
+            <p id="text">
+                <strong>Time Complexity:</strong> O(n<sup>2</sup>)
+                <br>
+
+                <strong>Space Complexity:</strong> O(1) <br>
+
+                <strong>Stability:</strong> Not stable.
+            </p>
+        </section>
+
+        <section id="contentSection"> <!--Merge-->
+            <h1 id="sectionHeader">4. Merge Sort</h1>
+
+            <h2 id="subHeader">Overview</h2>
+            <p id="text">
+                Merge sort is a sorting algorithm that works by recursively dividing an array into smaller subarrays, 
+                sorting each subarray, and then merging the sorted subarrays back together to form the sorted array. 
+                Unlike the previous sorting algorithms, the merge sort do not typically sort the array in-place 
+                (meaning that the sorting of elements is done outside of the original array, and usually in a newly 
+                created array), alhough it is possible to perform an in-place merge sort.
+            </p>
+
+            <h2 id="subHeader">Algorithm</h2>
+            <p id="text">
+                <strong>1)</strong> Divide the array in half.<br>
+                <strong>2)</strong> For each divided subarray, recursively repeat step 1 until each subarray has only 1 
+                    element.<br>
+                <strong>3)</strong> For each pair of divided subarrays (belonging to the same array before it was split), 
+                    compare each elements and combine<br>
+                    &emsp;them into another array in a sorted order.<br>
+                <strong>4)</strong> Repeat with the newly combined arrays until they are combined into the original size.<br>
+            </p>
+
+            <p id="text">
+                <strong><u>Explanation</u></strong><br>
+            </p>
+
+            <p id="text">
+                <strong><u>Analysis</u></strong><br>
+                <strong>Time Complexity:</strong> O(n * logn)
+                <br>
+
+                <strong>Space Complexity:</strong> O(n) <br>
+
+                <strong>Stability:</strong> Stable.
+            </p>
+        </section>
+        
+        <section id="contentSection">
+            <h1 id="sectionHeader">5. Quick Sort</h1>
+            <p id="text">
+                <strong><u>Overview</u></strong><br>
+            </p>
+
+            <p id="text">
+                <strong><u>Algorithm</u></strong><br>
+            </p>
+
+            <p id="text">
+                <strong><u>Explanation</u></strong><br>
+            </p>
+
+            <p id="text">
+                <strong><u>Analysis</u></strong><br>
+                <strong>Time Complexity:</strong> O(n<sup>2</sup>)
+                <br>
+
+                <strong>Space Complexity:</strong> O(1) <br>
+
+                <strong>Stability:</strong> Not stable.
+            </p>
+        </section>
+        
+        <section id="contentSection">
+            <h1 id="sectionHeader">Other comments</h1>
+            <p id="text">
+                I'd just like to say that there is no definite "best" sorting algorithm 
+                (although there could be a "worst" one) since the answer can change depending on what it 
+                is used on. Secondly, there are tons of sorting algorithms (and its variants) that 
+                exist, and more will continue to be created (by aspiring PHD graduates in their thesis) 
+                in the future, so I'd only list the basics/common ones. If you're interested in the 
+                others, feel free to explore more online (I'm sure there are research papers that  
+                provides thorough analyses into each of them).
+            </p>
+        </section>
+    </body>
+</html>
