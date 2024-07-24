@@ -17,6 +17,7 @@
 
 # misc
 .DS_Store
+/pageDesigns
 
 # debug
 npm-debug.log*
