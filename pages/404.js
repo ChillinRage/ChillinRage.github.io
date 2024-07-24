@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import { useState } from 'react';
 
-import InTransition from './components/inTransitionLayer';
-import OutTransition from './components/outTransitionLayer';
+import InTransition from '../components/inTransitionLayer';
+import OutTransition from '../components/outTransitionLayer';
 
 import styles from '../styles/404.module.css';
 

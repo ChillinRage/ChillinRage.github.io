@@ -1,10 +1,10 @@
 import Head from 'next/head';
 import { useState } from 'react';
 
-import ProjectCard from './components/projectCard';
-import SideLabel from './components/sideLabel';
-import InTransition from './components/inTransitionLayer';
-import OutTransition from './components/outTransitionLayer';
+import ProjectCard from '../components/projectCard';
+import SideLabel from '../components/sideLabel';
+import InTransition from '../components/inTransitionLayer';
+import OutTransition from '../components/outTransitionLayer';
 import styles from '../styles/Project.module.css';
 
 const UP_ARROW = <>&#x25B2;</>;

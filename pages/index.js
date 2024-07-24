@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
 
-import InTransition from './components/inTransitionLayer';
-import OutTransition from './components/outTransitionLayer';
+import InTransition from '../components/inTransitionLayer';
+import OutTransition from '../components/outTransitionLayer';
 
 import styles from '../styles/Home.module.css';
 

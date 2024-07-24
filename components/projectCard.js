@@ -1,4 +1,4 @@
-import styles from '../../styles/components/projectCard.module.css';
+import styles from '../styles/components/projectCard.module.css';
 
 export default function ProjectCard({project}) {
   const skillCards = parseSkills(project.skillset);

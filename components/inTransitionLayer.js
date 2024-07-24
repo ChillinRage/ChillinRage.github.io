@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from '../../styles/components/inTransitionLayer.module.css';
+import styles from '../styles/components/inTransitionLayer.module.css';
 
 const POMPOM_SAFE_PICS = [
   'ok',
