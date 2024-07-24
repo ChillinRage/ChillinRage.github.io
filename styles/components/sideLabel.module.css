@@ -1,0 +1,12 @@
+.label {
+    padding: 2px 0 2px 36px;
+    text-decoration: none;
+    color: inherit;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background-color 0.1s linear;
+}
+
+.label:hover {
+    background-color: rgb(165, 220, 60);
+  }
