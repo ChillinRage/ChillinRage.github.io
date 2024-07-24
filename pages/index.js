@@ -62,7 +62,7 @@ export default function Home() {
       {outHome ? loadOutTransition('/') : null}
       {outProject ? loadOutTransition('/project') : null}
       {outEducation ? loadOutTransition('/404') : null}
-      {outTechnology ? loadOutTransition('/technology') : null}
+      {outTechnology ? loadOutTransition('/404') : null}
 
       <main>
         <div className={styles.tabColumn}>

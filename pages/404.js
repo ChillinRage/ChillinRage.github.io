@@ -22,11 +22,16 @@ export default function NotFound() {
       <main className={styles.mainContent}>
         <h1>OOPS!</h1>
         <p>Seems like the link hasn't been updated yet. Until it does, enjoy this page!</p>
-        <a onClick={() => setOutHome(true)}>Or click to go back home</a>
+        <a href='/' onClick={() => setOutHome(true)}>Or click to go back home</a>
+        <br/><br/>
+        <img src='/pompom/cry.png'/>
       </main>
 
       <style jsx>{`
         main {
+          text-align: center;
+          font-size: 24px;
+          margin: auto;
           width: 100%;
           padding: 3em;
           vertical-align: center;

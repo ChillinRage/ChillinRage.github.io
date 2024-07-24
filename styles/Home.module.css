@@ -13,7 +13,7 @@
 .navImage {
   width: 206px;
   margin: 0 0 3em 0;
-  transition: all 0.5s linear;
+  transition: all 0.4s linear;
 }
 
 .navImage:hover {
