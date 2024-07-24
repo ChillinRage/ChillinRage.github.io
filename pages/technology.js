@@ -65,6 +65,6 @@ function loadInTransition() {
 
 function loadOutTransition(url) {
   const layer = <OutTransition message='Leaving "Technology"...' isSafe={true}/>
-  setTimeout(() => window.open(url, "_self"), 1000);
+  setTimeout(() => window.location.href = url, 1000);
   return layer;
 }
