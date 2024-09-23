@@ -6,12 +6,12 @@ import OutTransition from '../components/outTransitionLayer';
 
 import styles from '../styles/Technology.module.css';
 
-const LANGUAGE = ['CSS', 'HTML', 'Java', 'JavaScript', 'Python'];
+const LANGUAGE = ['CSS', 'HTML', 'Java', 'JavaScript', 'Python', 'R', 'TypeScript'];
 const FRONT_END = ['Next.js', 'React.js'];
 const BACK_END = ['Node.js'];
 const TOOL = ['Git'];
 
-export default function Hobby() {
+export default function Technology() {
   const [displayOut, setOut] = useState(false);
 
   return (

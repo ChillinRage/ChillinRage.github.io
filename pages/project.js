@@ -16,7 +16,6 @@ export default function Project() {
   const [displaySchool, setSchool] = useState(false);
   const [displayOpenSource, setOpenSource] = useState(false);
   const [displaySide, setSide] = useState(false);
-
   const [displayOut, setOut] = useState(false);
 
   return (
@@ -138,6 +137,18 @@ function getProjects() {
     'https://github.com/ChillinRage/tp',
   );
 
+  const PeerPrep = createProjectObject(
+    'SCHOOL',
+    'preview/peerprep.png',
+    'PeerPrep (CURRENT WORK IN PROGRESS)',
+    'A full-stack application feature a technical interview preparation platform and '
+      + 'peer matching system, where students can find peers to practice '
+      + 'whiteboard-style interview questions together.',
+    'React, NodeJs, Express, MongoDB',
+    '404',
+    'https://github.com/CS3219-AY2425S1/cs3219-ay2425s1-project-g34/',
+  );
+
   const holoCureProject = createProjectObject(
     'SIDE',
     'preview/holocure.jpg',
@@ -222,6 +233,7 @@ function getProjects() {
 
   return [
     NUSContactsProject,
+    PeerPrep,
     holoCureProject,
     birthdayWishProject,
     screenAnnotateProject,

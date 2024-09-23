@@ -1,0 +1,80 @@
+.myImage {
+    width: 30%;
+    object-fit: contain;
+    float: left;
+    border: solid 4px #7d2cda;
+    border-radius: 15px;
+  }
+  
+  .myDetails {
+    width: 55%;
+    padding-left: 1.5em;
+    margin: 0;
+    float: left;
+  }
+  
+  .myName {
+    text-decoration: underline;
+    font-size: 48px;
+    margin: 0;
+    color:#2500f5;
+  }
+  
+  .myTitle {
+    font-size: 35px;
+    margin: 0;
+    color:#ca0101;
+  }
+  
+  .myIntro {
+    font-size: 20px;
+    margin: 1.5em 0 2em 0;
+  }
+  
+  .boldHeader {
+    font-size: 25px;
+    margin: 0.5em 0 0.5em 0;
+  }
+  
+  .smallNote {
+    padding-left: 5px;
+    display: inline;
+    font-weight: 500;
+    font-size: 20px;
+  }
+  
+  .followLogo {
+    width: 48px;
+    margin: 0 0.5em 0 0;
+  }
+  
+  .email,
+  .telegram {
+    width: 120px;
+    margin: 5px 0;
+    padding: 5px;
+    text-align: center;
+    font-size: 23px;
+    font-weight: bolder;
+    font-family: Monaco, Consolas, Lucida Console, monospace;
+    color: white;
+    background-color: rgb(58, 80, 141);
+    border: 3px solid black;
+    border-radius: 10px;
+    transition: color 0.4s ease-in-out;
+  }
+  
+  .email:hover,
+  .telegram:hover {
+    color: rgb(255, 238, 0);
+  }
+  
+  .textArea {
+    margin: auto 0;
+    padding-left: 15px;
+    display: inline;
+    letter-spacing: 2px;
+    font-size: 28px;
+    font-family: Monaco, Consolas, Lucida Console, monospace;
+    color: rgb(96, 107, 204);
+  }
