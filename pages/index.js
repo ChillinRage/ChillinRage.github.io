@@ -22,8 +22,8 @@ export default function Home() {
       <Head>
         <title>Chong Chan How</title>
         <link rel="icon" href="/HowLogo.ico" />
-        <GoogleTagManager gtmId="GTM-NLXPRMVV"/>
       </Head>
+      <GoogleTagManager gtmId="GTM-NLXPRMVV"/>
 
       { loadInTransition() }
       { outHome && loadOutTransition('/') }
