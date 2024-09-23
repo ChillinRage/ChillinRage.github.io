@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { GoogleTagManager } from '@next/third-parties/google';
 import { useState } from 'react';
 
 import About from '../components/about';
@@ -21,6 +22,7 @@ export default function Home() {
       <Head>
         <title>Chong Chan How</title>
         <link rel="icon" href="/HowLogo.ico" />
+        <GoogleTagManager gtmId="GTM-VE69HC1Q1N"/>
       </Head>
 
       { loadInTransition() }
