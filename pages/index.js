@@ -22,7 +22,7 @@ export default function Home() {
       <Head>
         <title>Chong Chan How</title>
         <link rel="icon" href="/HowLogo.ico" />
-        <GoogleTagManager gtmId="GTM-VE69HC1Q1N"/>
+        <GoogleTagManager gtmId="GTM-NLXPRMVV"/>
       </Head>
 
       { loadInTransition() }
