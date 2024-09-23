@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { useState } from 'react';
+import TagManager from 'react-gtm-module'
 
 import About from '../components/about';
 import InTransition from '../components/inTransitionLayer';
@@ -8,6 +9,9 @@ import OutTransition from '../components/outTransitionLayer';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
+  const tagManagerArgs = { gtmId: 'GTM-VE69HC1Q1N' }
+  TagManager.initialize(tagManagerArgs)
+
   const [outHome, setOutHome] = useState(false);
   const [outProject, setOutProject] = useState(false);
   //const [outEducation, setOutEducation] = useState(false);
