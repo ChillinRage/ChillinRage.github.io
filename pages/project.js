@@ -128,10 +128,10 @@ function getProjects() {
     'SCHOOL',
     'preview/nuscontacts.png',
     'NUSContacts',
-    'A desktop app designed for NUS Students, offering a streamlined way '
-      + 'to manage their academic contacts with ease. Whether you’re organizing peer groups, '
-      + 'keeping track of tutors, or connecting with professors, NUSContacts centralizes '
-      + 'the organization of contacts.',
+    `A desktop app designed for NUS Students, offering a streamlined way 
+      to manage their academic contacts with ease. Whether you’re organizing peer groups, 
+      keeping track of tutors, or connecting with professors, NUSContacts centralizes 
+      the organization of contacts.`,
     'Gradle, Java, JUnit',
     'https://ay2324s2-cs2103t-t11-2.github.io/tp/',
     'https://github.com/ChillinRage/tp',
@@ -141,9 +141,9 @@ function getProjects() {
     'SCHOOL',
     'preview/peerprep.png',
     'PeerPrep (CURRENT WORK IN PROGRESS)',
-    'A full-stack application feature a technical interview preparation platform and '
-      + 'peer matching system, where students can find peers to practice '
-      + 'whiteboard-style interview questions together.',
+    `A full-stack application feature a technical interview preparation platform and 
+      peer matching system, where students can find peers to practice 
+      whiteboard-style interview questions together.`,
     'React, NodeJs, Express, MongoDB',
     '404',
     'https://github.com/CS3219-AY2425S1/cs3219-ay2425s1-project-g34/',
@@ -153,10 +153,10 @@ function getProjects() {
     'SIDE',
     'preview/holocure.jpg',
     'HoloCure Fishing Bot',
-    'A bot designed to auto-farm for fishes in the game "HoloCure". '
-      + 'It utilizes Python libraries to capture screen frames in real-time to detect in-game '
-      + 'fishing controls and executes the necessary keys to catch the fish. This automates the '
-      + '"grindy" aspect of the game to obtain lots of in-game gold.',
+    `A bot designed to auto-farm for fishes in the game "HoloCure". 
+      It utilizes Python libraries to capture screen frames in real-time to detect in-game 
+      fishing controls and executes the necessary keys to catch the fish. This automates the 
+      "grindy" aspect of the game to obtain lots of in-game gold.`,
     'Python',
     '404',
     'https://github.com/ChillinRage/HoloCure-Fishing-Bot',
@@ -166,11 +166,11 @@ function getProjects() {
     'SIDE',
     'preview/birthdayWish.png',
     'Birthday Wisher',
-    'An automation tool designed to send personalized birthday emails. '
-      + 'By leveraging Python libraries and windows scheduler, the bot retrieves '
-      + 'contact information from a predefined file and sends birthday messages via email, '
-      + 'ensuring no birthday is missed. This simplifies the process of remembering and '
-      + 'celebrating important dates, making it an ideal solution for personal use.',
+    `An automation tool designed to send personalized birthday emails. 
+      By leveraging Python libraries and windows scheduler, the bot retrieves 
+      contact information from a predefined file and sends birthday messages via email, 
+      ensuring no birthday is missed. This simplifies the process of remembering and 
+      celebrating important dates, making it an ideal solution for personal use.`,
     'Python',
     '404',
     'https//github.com/ChillinRage/Birthday-Bot',
@@ -180,7 +180,7 @@ function getProjects() {
     'SIDE',
     'preview/screenAnnotate.png',
     'Screen Annotater',
-    'This is a short description of this project.',
+    `This is a short description of this project.`,
     'Java',
     '404',
     '404',
@@ -190,10 +190,10 @@ function getProjects() {
     'OPENSOURCE',
     'preview/nusmods.png',
     'NUSMods',
-    'Contributed to "NUSMods", a comprehensive timetable planner for NUS. By '
-      + 'fixing noticeable bugs and improving the user interface, my contributions '
-      + 'sees tangible impacts on NUS students with a more accurate and informative planner '
-      + 'to aid in their course planning.',
+    `Contributed to "NUSMods", a comprehensive timetable planner for NUS. By 
+      fixing noticeable bugs and improving the user interface, my contributions 
+      sees tangible impacts on NUS students with a more accurate and informative planner 
+      to aid in their course planning.`,
     'TypeScript',
     'https://nusmods.com',
     'https://github.com/ChillinRage/nusmods',
@@ -203,7 +203,10 @@ function getProjects() {
     'SIDE',
     'preview/academic.png',
     'My Academic Record',
-    'This is a short description of this project.',
+    `A static web page, designed for simplicity, features an organized and visually 
+      appealing display of my academic grades throughout my University coursework. 
+      Using React, it highlights my performance in various courses, 
+      providing an easy-to-navigate summary of key achievements.`,
     'CSS, HTML, ReactJS, TypeScript',
     'https://chillinrage.github.io/Academic-Results/',
     'https://github.com/ChillinRage/Academic-Results/tree/react',
@@ -213,7 +216,11 @@ function getProjects() {
     'SIDE',
     'preview/portfolio.png',
     'Portfolio Page',
-    'This is a short description of this project.',
+    `Built using Next.js to showcase my projects, skills, 
+    and experiences. The site features a modern, responsive design with 
+    optimized performance, leveraging the power of Next.js for server-side 
+    rendering and fast loading times. It highlights key projects, including 
+    academic work and personal development efforts.`,
     'CSS, HTML, JavaScript, NextJS',
     '/',
     '404',
