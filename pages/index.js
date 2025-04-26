@@ -7,6 +7,7 @@ import InTransition from '../components/inTransitionLayer';
 import OutTransition from '../components/outTransitionLayer';
 
 import styles from '../styles/Home.module.css';
+import Maintenance from '../components/maintenance';
 
 export default function Home() {
   const [outHome, setOutHome] = useState(false);
@@ -43,6 +44,7 @@ export default function Home() {
         </div>
 
         <div className={styles.mainContent}>
+          <Maintenance />
           <About />
         </div>
       </main>
