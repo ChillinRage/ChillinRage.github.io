@@ -1,0 +1,11 @@
+.resume-btn {
+  font-size: 18px;
+  padding: 3px 8px;
+  border: 1px solid black;
+  border-radius: 6px;
+  transition: linear 0.2s;
+}
+
+.resume-btn:hover {
+  background-color: rgb(225, 225, 225);
+}

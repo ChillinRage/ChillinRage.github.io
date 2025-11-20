@@ -1,0 +1,39 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  border-bottom: solid 2px;
+  font-size: 20px;
+}
+
+.my-info {
+  display: flex;
+  flex-direction: column;
+  color: inherit;
+  text-decoration: none;
+}
+
+.tab-container {
+  display: flex;
+  gap: 1rem; /* space between tabs */
+}
+
+.tab {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.name {
+  font-size: 20px;
+  margin: 0;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
